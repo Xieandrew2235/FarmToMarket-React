@@ -1,20 +1,27 @@
-import React from "react";
+import React from 'react'
 import "./Nav.css";
 
-const Nav = props => (
-    <nav>
-        <ul>
-            <li className="brand">
-                <a href="/clickygame/"> {props.title} </a>
-            </li>
+function NavBar (){
+    return (
+        <nav>
+        <div className="nav-wrapper cyan darken-3">
+            <a href="/" className="brand-logo center">Project 3</a>
+            <ul id="nav-mobile" className="left hide-on-med-and-down">
+                <li><a href="sass.html">Home</a></li>
+                <li><a href="badges.html">Account</a></li>
+                <li><a href="collapsible.html">About Us</a></li>
+            </ul>
 
-            <li id="rw">{props.rightWrong}</li>
+            <ul className="right hide-on-med-and-down">
+                <li><a className="waves-effect waves-light btn">Sign in<i
+                            className="material-icons right">account_circle</i></a></li>
+                <li><a className="waves-effect waves-light btn">Sign up<i
+                            className="material-icons right">account_circle</i></a></li>
 
-            <li id="cur-sco">Home {props.score}</li>
-
-            <li id="top-sco">Welcome to our app! {props.topScore}</li>
-        </ul>
+            </ul>
+        </div>
     </nav>
-);
+    )
+}
 
-export default Nav;
+export default NavBar;
