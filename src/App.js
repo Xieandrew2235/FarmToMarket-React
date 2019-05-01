@@ -1,8 +1,6 @@
 import React from 'react';
-
-import './App.css';
-// Import pages and components
-import Navbar from '/components/Navbar/Nav';
+import Navbar from './components/Nav'
+import CardRow from './components/CardRow'
 
 function App() {
   return (
@@ -13,6 +11,5 @@ function App() {
       </div>
     </div>);
 }
-
 
 export default App;
