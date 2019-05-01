@@ -2,7 +2,7 @@ import React from 'react'
 
 function RegstrationForm() {
     return(
-        <div className= "form "></div>
+        <div className= "form"></div>
         <Container>
             <div className="formCont">
             <h2>Register</h2>
