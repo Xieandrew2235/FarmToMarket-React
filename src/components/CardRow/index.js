@@ -7,15 +7,15 @@ function CardRow (){
         <Card 
         title="Tester"
         description="Test"
-        image="https://i.imgur.com/ELJlQz1.jpg"/>
+        image="https://i.imgur.com/uSqRa4h.png"/>
         <Card 
         title="Tester2"
         description="Test2"
-        image="https://i.imgur.com/ELJlQz1.jpg"/>
+        image="https://i.imgur.com/UmsI6vr.jpg"/>
         <Card 
         title="Tester3"
         description="Test3"
-        image="https://i.imgur.com/wX9MX57.jpg"/>
+        image="https://i.imgur.com/5x2TAdI.jpg"/>
         </div>
     )
 }
