@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
+
 function RegistrationForm() {
     return(
         <div className= "form">
@@ -41,7 +42,7 @@ function RegistrationForm() {
             </div>
             <div className="input-field col s6">
             {/* Add a link, link-to for the submit button that redirects to dashboard */}
-            <Link to="/dashboard">
+            <Link to="/merchantdashboard">
             <button class="btn waves-effect waves-light" type="submit" name="action">Submit
             <i class="material-icons right">send</i>
             </button>

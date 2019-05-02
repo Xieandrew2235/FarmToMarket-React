@@ -1,9 +1,14 @@
 import React from "react"
+import { Link } from 'react-router-dom';
 
-export function SearchBtn(props) {
+function SearchBtn() {
     return (
-      <button {...props} style={{ margin:"auto" ,  }} className="btn " type="submit">
-       Search {props.children}
-      </button>
+<button class="btn waves-effect waves-light" type="submit" name="action">Submit
+<Link to="/dashboard">
+    <i class="material-icons right">send</i>
+    </Link>
+  </button>
     );
   } 
+
+  export default SearchBtn;
