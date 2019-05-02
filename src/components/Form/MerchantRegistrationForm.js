@@ -2,11 +2,11 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 
 
-function RegistrationForm() {
+function MerchantRegistrationForm() {
     return(
         <div className= "form">
             <div className="formCont">
-            <h2 center>Registration</h2>
+            <h2 center>Merchant Registration</h2>
             <div className = "row">
             <div className="input-field col s6">
             <input id="name" type="text" required />
@@ -33,16 +33,8 @@ function RegistrationForm() {
             <label htmlFor="phone">Phone</label>
             </div>
             <div className="input-field col s6">
-            <input id="produce" type="text" required />
-            <label htmlFor="produce">What are you willing to produce</label>
-            </div>
-            <div className="input-field col s6">
-            <input id="nonprofit" type="text" required />
-            <label htmlFor="nonprofit">Are you involved with non-profits?</label>
-            </div>
-            <div className="input-field col s6">
             {/* Add a link, link-to for the submit button that redirects to dashboard */}
-            <Link to="/dashboard">
+            <Link to="/merchantdashboard">
             <button class="btn waves-effect waves-light" type="submit" name="action">Submit
             <i class="material-icons right">send</i>
             </button>
@@ -53,4 +45,4 @@ function RegistrationForm() {
         </div>
     )
 }
-export default RegistrationForm;
+export default MerchantRegistrationForm;
