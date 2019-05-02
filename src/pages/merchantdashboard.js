@@ -1,11 +1,12 @@
 import React from 'react';
-import LoginForm from '../components/Form/LoginForm';
-
+import SearchBox from '../components/SearchBox';
+import SearchBtn from '../components/SearchBtn'
 function Login () {
 return (
     <div>
         <div className="container">
-            <LoginForm />
+            <SearchBox />
+            <SearchBtn />
         </div>
     </div>
 )

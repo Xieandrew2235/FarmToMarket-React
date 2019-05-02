@@ -14,7 +14,12 @@ function NavBar() {
                     </li>
                     <li>
                         <Link to="/registration">
-                            Register<i className="material-icons right">account_circle</i>
+                            Farmer registration<i className="material-icons right">account_circle</i>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/merchantregistration">
+                            Merchant registration<i className="material-icons right">account_circle</i>
                         </Link>
                     </li>
                 </ul>
