@@ -5,8 +5,9 @@ import { Link } from 'react-router-dom';
 function RegistrationForm() {
     return(
         <div className= "form">
+        
             <div className="formCont">
-            <h2 center>Registration</h2>
+            <h2 center>Farmer Registration</h2>
             <div className = "row">
             <div className="input-field col s6">
             <input id="name" type="text" required />

@@ -1,6 +1,5 @@
 import React from 'react';
 import Navbar from './components/Nav'
-// import CardRow from './components/CardRow'
 import Landing from './pages/landing';
 import Registration from './pages/registration';
 import Login from './pages/login';
