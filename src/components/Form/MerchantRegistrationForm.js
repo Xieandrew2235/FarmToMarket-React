@@ -1,10 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
+console.log("Hello I'm on the merchant component");
 
 function MerchantRegistrationForm() {
     return(
         <div className= "form">
+    
             <div className="formCont">
             <h2 center>Merchant Registration</h2>
             <div className = "row">
