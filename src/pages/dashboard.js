@@ -1,15 +1,16 @@
 import React from 'react';
-import CardRow from '../components/CardRow'
+import SearchBox from '../components/SearchBox';
+import SearchBtn from '../components/SearchBtn'
 
-function Landing() {
-  return (
+function Dashboard () {
+return (
     <div>
-      <div className="container">
-
-        <CardRow />
-
-      </div>
-    </div>);
+        <div className="container">
+            <SearchBox />
+            <SearchBtn />
+        </div>
+    </div>
+)
 }
 
-export default Landing;
+export default Dashboard;

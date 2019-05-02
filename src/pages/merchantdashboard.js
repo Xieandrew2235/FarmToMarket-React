@@ -1,7 +1,8 @@
 import React from 'react';
 import SearchBox from '../components/SearchBox';
 import SearchBtn from '../components/SearchBtn'
-function Login () {
+
+function MerchantDB () {
 return (
     <div>
         <div className="container">
@@ -12,4 +13,4 @@ return (
 )
 }
 
-export default Login;
+export default MerchantDB;

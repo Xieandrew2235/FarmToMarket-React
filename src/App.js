@@ -3,10 +3,11 @@ import Navbar from './components/Nav'
 // import CardRow from './components/CardRow'
 import Landing from './pages/landing';
 import Registration from './pages/registration';
-import Dashboard from './pages/dashboard';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Login from './pages/login';
+import MerchantRegistration from './pages/merchantregistration';
+import Dashboard from './pages/dashboard';
 import MerchantDB from './pages/merchantdashboard';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route exact path="/" component={Landing} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/registration" component={Registration} />
+          <Route exact path="/merchantregistration" component={MerchantRegistration} />
           <Route exact path="/merchantdashboard" component={MerchantDB} />
           <Route exact path="/dashboard" component={Dashboard} />
           <Route path="/" component={Landing} />
