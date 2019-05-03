@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-console.log("Hello I'm on the merchant component");
-
 function MerchantRegistrationForm() {
     return(
         <div className= "form">
