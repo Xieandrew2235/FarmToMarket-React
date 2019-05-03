@@ -32,6 +32,7 @@ class MerchantRegistrationForm extends Component {
             zipcode: 123456789,
             city: this.state.city
         }
+        
 
         API.registerNewUser(newUser)
             .then(res => console.log(res))
