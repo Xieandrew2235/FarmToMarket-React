@@ -7,10 +7,10 @@ class MerchantRegistrationForm extends Component {
     state = {
         userName: "",
         password: "",
-        name: "",
+        userType: "",
         address: "",
         city: "",
-        state: "",
+        zipcode: "",
         email: "",
         phone: ""
     };
@@ -28,9 +28,12 @@ class MerchantRegistrationForm extends Component {
         const newUser = {
             userName: this.state.userName,
             password: this.state.password,
-            userType: this.state.name,
-            zipcode: 123456789,
-            city: this.state.city
+            userType: this.state.userType,
+            address: this.state.address,
+            zipcode: parseInt(this.state.zipcode),
+            city: this.state.city,
+            email: this.state.email,
+            phone: this.state.phone
         }
         
 
@@ -55,8 +58,8 @@ class MerchantRegistrationForm extends Component {
                             <label htmlFor="password">Enter your password</label>
                         </div>
                         <div className="input-field col s6">
-                            <input id="name" type="text" name="name" required onChange={this.handleInputChange} />
-                            <label htmlFor="name">Enter your name</label>
+                            <input id="userType" type="text" name="userType" required onChange={this.handleInputChange} />
+                            <label htmlFor="userType">Are you a "farmer" or a "storeOwner"?</label>
                         </div>
                         <div className="input-field col s6">
                             <input id="address" type="text" name="address" required onChange={this.handleInputChange} />
@@ -67,8 +70,8 @@ class MerchantRegistrationForm extends Component {
                             <label htmlFor="city">City</label>
                         </div>
                         <div className="input-field col s6">
-                            <input id="state" type="text" name="state" required onChange={this.handleInputChange} />
-                            <label htmlFor="state">State</label>
+                            <input id="zipcode" type="text" name="zipcode" required onChange={this.handleInputChange} />
+                            <label htmlFor="zipcode">Zipcode</label>
                         </div>
                         <div className="input-field col s6">
                             <input id="email" type="text" name="email" required onChange={this.handleInputChange} />
