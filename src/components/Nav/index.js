@@ -13,13 +13,8 @@ function NavBar() {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/registration">
-                            Farmer registration<i className="material-icons right">account_circle</i>
-                        </Link>
-                    </li>
-                    <li>
                         <Link to="/merchantregistration">
-                            Merchant registration<i className="material-icons right">account_circle</i>
+                            Registration<i className="material-icons right">account_circle</i>
                         </Link>
                     </li>
                 </ul>
