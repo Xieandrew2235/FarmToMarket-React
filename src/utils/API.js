@@ -46,6 +46,10 @@ export default {
 
     registerNewUser: userData => {
         return axios.post("http://localhost:3001/auth/register", userData);
+    },
+
+    loginUser: userData => {
+        return axios.post("http://localhost:3001/auth/signin", userData);
     }
 
 }
