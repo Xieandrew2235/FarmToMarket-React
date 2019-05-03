@@ -1,7 +1,6 @@
 import React from 'react';
 import Navbar from './components/Nav'
 import Landing from './pages/landing';
-import Registration from './pages/registration';
 import Login from './pages/login';
 import MerchantRegistration from './pages/merchantregistration';
 import Dashboard from './pages/dashboard';
@@ -16,7 +15,6 @@ function App() {
         <Switch>
           <Route exact path="/" component={Landing} />
           <Route exact path="/login" component={Login} />
-          <Route exact path="/registration" component={Registration} />
           <Route exact path="/merchantregistration" component={MerchantRegistration} />
           <Route exact path="/merchantdashboard" component={MerchantDB} />
           <Route exact path="/dashboard" component={Dashboard} />
