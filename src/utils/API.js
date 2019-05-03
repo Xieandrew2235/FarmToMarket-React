@@ -35,18 +35,17 @@ export default {
         console.log("searchTerm: " + searchTerm);
         return axios.get("") 
     },
-    /* createNewItem: function() {
-        return axios.post("Localhost:3000/api/items/:userid")
-    },
-    updateItem: function() {
-        return axios.put("Localhost:3000/api/items/:itemId")
-    },
-    deleteItem: function() {
-        return axios.delete("Localhost:3000/api/items/:itemId")
-    } */
 
+    // Query database to find all farmers that sell a specified produce.
     getFarmersByProduce: function(produceName) {
         return axios.get("/api/farmers/produce", produceName);
+    },
+
+    // PASSPORT METHODS
+    // ====================================
+
+    registerNewUser: userData => {
+        return axios.post("http://localhost:3001/auth/register", userData);
     }
 
 }
