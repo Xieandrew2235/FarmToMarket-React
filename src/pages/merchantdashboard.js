@@ -38,7 +38,7 @@ import API from '../utils/API';
         handleFormSubmit = event => {
           event.preventDefault();
         
-          API.getFarmersByProduce(this.state.produceName)
+          API.getFarmersByProduce(this.state.prod_Name)
             .then(res => {
                 console.log(res);
                 this.setState({
