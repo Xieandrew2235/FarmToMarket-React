@@ -47,7 +47,7 @@ class MerchantRegistrationForm extends Component {
             <div className="form">
 
                 <div className="formCont">
-                    <h2 center>Merchant Registration</h2>
+                    <h2 >Merchant Registration</h2>
                     <div className="row">
                         <div className="input-field col s6">
                             <input id="userName" type="text" name="userName" required onChange={this.handleInputChange} />
@@ -83,8 +83,8 @@ class MerchantRegistrationForm extends Component {
                         </div>
                         <div className="input-field col s6">
                             {/* Add a link, link-to for the submit button that redirects to dashboard */}
-                            <button class="btn waves-effect waves-light" onClick={this.handleFormSubmit} name="action"><Link to="/merchantdashboard">Submit
-                <i class="material-icons right">send</i>
+                            <button className="btn waves-effect waves-light" onClick={this.handleFormSubmit} name="action"><Link to="/merchantdashboard">Submit
+                <i className="material-icons right">send</i>
                             </Link>
                             </button>
 

@@ -1,6 +1,7 @@
 import axios from "axios";
 
 export default {
+    //https://cors-anywhere.herokuapp.com/
     searchFarmer: function () {
         return axios.get("http://localhost:3001/api/farmers")
     },

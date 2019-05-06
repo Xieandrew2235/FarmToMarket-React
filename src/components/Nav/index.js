@@ -5,7 +5,7 @@ function NavBar() {
     return (
         <nav>
             <div className="nav-wrapper">
-                <a href="/" className="brand-logo center">Project 3</a>
+                <a href="/" className="brand-logo center">FVRMK: Farmer to Market</a>
                 <ul className="right hide-on-med-and-down">
                     <li>
                         <Link to="/login">
