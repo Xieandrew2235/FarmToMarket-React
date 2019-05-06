@@ -11,6 +11,7 @@ class LoginForm extends Component {
     }
 
     handleInputChange = event => {
+        console.log(this.state)
         const { name, value } = event.target;
         this.setState({
             [name]: value
@@ -18,6 +19,7 @@ class LoginForm extends Component {
     };
 
     handleFormSubmit = event => {
+        
         event.preventDefault();
 
 
@@ -36,22 +38,31 @@ class LoginForm extends Component {
         return(
             <div className = "form" >
                 <div className="formCont">
-                    <h2 center>Login</h2>
+                    <h2>Login</h2>
                     <div className="row">
                         <div className="input-field col s6">
-                            <input id="userName" name="userName" type="text" required />
+                            <input 
+                            value={this.state.userName}
+                            name="userName" 
+                            type="text" 
+                            onChange={this.handleInputChange}
+                            placeholder="User Name"
+                            required />
+
                             <label htmlFor="userName">Username</label>
                         </div>
                         <div className="input-field col s6">
-                            <input id="password" name="password" type="password" required />
+                            <input 
+                            value={this.state.password}
+                            name="password" 
+                            type="password" 
+                            onChange={this.handleInputChange}
+                            placeholder="Password"
+                            required />
                             <label htmlFor="password">Password</label>
                         </div>
-                        <button class="btn waves-effect waves-light" type="submit" name="action">
-                            <Link to="/dashboard">
-                                Submit
-                                <i className="material-icons right">send</i>
-                            </Link>
-                        </button>
+                        <button className="btn waves-effect waves-light" type="submit" name="action" onClick={this.handleFormSubmit}>Submit <i className="material-icons right">send</i></button>
+                       
                     </div>
                 </div>
             </div>

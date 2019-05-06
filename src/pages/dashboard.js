@@ -24,15 +24,23 @@ class Dashboard extends Component {
 
     handleFormSubmit = event => {
         event.preventDefault();
-        console.log(this.state);
+        console.log("Searching Database");
 
-        API.getFarmersByProduce(this.state.prod_Name)
-            .then(res => {
-                console.log(res.data);
-                this.setState({
-                    farmerData: res.data,
-                });
+        // API.getFarmersByProduce(this.state.prod_Name)
+        //     .then(res => {
+        //         console.log(res.data);
+        //         this.setState({
+        //             farmerData: res.data,
+        //         });
+        //     });
+
+        API.searchFarmer()
+        .then(res => {
+            console.log(res.data);
+            this.setState({
+                farmerData: res.data,
             });
+        });
     };
 
     componentDidMount() {
@@ -65,6 +73,7 @@ class Dashboard extends Component {
                     <SearchBtn
                         disabled={!(this.state.searchTerm)}
                         onClick={this.handleFormSubmit}
+                        click ={this.handleFormSubmit}
                     />
 
                     <div className="container">
