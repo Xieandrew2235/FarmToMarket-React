@@ -35,7 +35,7 @@ class MerchantRegistrationForm extends Component {
             email: this.state.email,
             phone: this.state.phone
         }
-        
+
 
         API.registerNewUser(newUser)
             .then(res => console.log(res))
@@ -83,11 +83,11 @@ class MerchantRegistrationForm extends Component {
                         </div>
                         <div className="input-field col s6">
                             {/* Add a link, link-to for the submit button that redirects to dashboard */}
-                            <Link to="/merchantdashboard">
-                                <button class="btn waves-effect waves-light" onClick={this.handleFormSubmit} name="action">Submit
+                            <button class="btn waves-effect waves-light" onClick={this.handleFormSubmit} name="action"><Link to="/merchantdashboard">Submit
                 <i class="material-icons right">send</i>
-                                </button>
                             </Link>
+                            </button>
+
                         </div>
                     </div>
                 </div>
