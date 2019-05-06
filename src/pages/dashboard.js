@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import SearchBox from '../components/SearchBox';
 import SearchBtn from '../components/SearchBtn';
 import MerchantRegistrationForm from '../components/Form/MerchantRegistrationForm';
