@@ -49,7 +49,7 @@ class LoginForm extends Component {
                         <button class="btn waves-effect waves-light" type="submit" name="action">
                             <Link to="/dashboard">
                                 Submit
-                                <i class="material-icons right">send</i>
+                                <i className="material-icons right">send</i>
                             </Link>
                         </button>
                     </div>
