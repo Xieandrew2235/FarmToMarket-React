@@ -1,5 +1,5 @@
 import React from 'react';
-import MerchantRegistrationForm from '../components/Form/MerchantRegistrationForm'
+import MerchantRegistrationForm from '../../components/Form/MerchantRegistrationForm'
 
 function MerchantRegistration () {
 return (

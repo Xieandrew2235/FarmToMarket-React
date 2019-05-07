@@ -1,35 +1,76 @@
-import React from 'react';
-import Navbar from './components/Nav'
-import Landing from './pages/landing';
-import Login from './pages/login';
-import MerchantRegistration from './pages/merchantregistration';
-import Dashboard from './pages/dashboard';
-import MerchantDB from './pages/merchantdashboard';
+import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import UserRoutes from './routes/UserRoutes';
+import GuestRoutes from './routes/GuestRoutes';
+import Navbar from './components/NavBar'
+import API from './utils/API';
 
-function App() {
-  return (
-    <Router>
-      <div>
-        <Navbar />
-        <Switch>
-          <Route exact path="/" component={Landing} />
-          <Route exact path="/login" component={Login} />
-          <Route exact path="/merchantregistration" component={MerchantRegistration} />
-          <Route exact path="/merchantdashboard" component={MerchantDB} />
-          <Route exact path="/dashboard" component={Dashboard} />
-          <Route path="/" component={Landing} />
-        </Switch>
-      </div>
-    </Router>
+class App extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      isAuthenticated: false
+    }
+  }
 
+  componentWillMount(){
+    this.checkAuth()
+  }
 
+  checkAuth = () => {
+    API.checkAuth()
+    .then(data => {return data.json()})
+    .then(response => {
+      console.log("res", response)
+      this.setState({
+        isAuthenticated: response
+      })
+    })
+    .catch(err => console.log("err", err));
+  }
 
-      // <div className="container">
-      //    <CardRow />
-      //    <CardRow />
-      //  </div>
-    );
+  useGuestRoutes = () => {
+    return (
+      <Router>
+        <div className="main">
+          <Navbar authenticated={this.state.isAuthenticated}/>
+          <div className="content">
+            <Route path="*" component={GuestRoutes} />
+          </div>
+        </div>
+      </Router>
+    )
+  }
+
+  useUserRoutes = () => {
+    return(
+      <Router>
+        <div className="main">
+          <Navbar  authenticated={this.state.isAuthenticated}/>
+          <div className="content">
+          <Switch>
+            <Route exact path="/" component={UserRoutes} />
+            <Route exact path="/merchantdashboard" component={UserRoutes} />
+            <Route exact path="/dashboard" component={UserRoutes} />
+            <Route path="/dashboard/*" component={UserRoutes} />
+            <Route path="*" component={GuestRoutes} />
+          </Switch>
+          </div>
+        </div>
+      </Router>
+    )
+  }
+
+  render(){
+    switch(this.state.isAuthenticated){
+      case false:
+       return this.useGuestRoutes()
+      case true:
+       return this.useUserRoutes()
+      default:
+       return this.useGuestRoutes()
+    }
+  }
 }
 
 export default App;
