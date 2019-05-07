@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import SearchBox from '../components/SearchBox';
-import SearchBtn from '../components/SearchBtn';
-import MerchantRegistrationForm from '../components/Form/MerchantRegistrationForm';
-import CardRow from '../components/CardRow';
-import API from '../utils/API';
+import SearchBox from '../../components/SearchBox';
+import SearchBtn from '../../components/SearchBtn';
+import CardRow from '../../components/CardRow';
 
 class Dashboard extends Component {
     state = {
@@ -34,13 +32,13 @@ class Dashboard extends Component {
         //         });
         //     });
 
-        API.searchFarmer()
-        .then(res => {
-            console.log(res.data);
-            this.setState({
-                farmerData: res.data,
-            });
-        });
+        // API.searchFarmer()
+        // .then(res => {
+        //     console.log(res.data);
+        //     this.setState({
+        //         farmerData: res.data,
+        //     });
+        // });
     };
 
     componentDidMount() {
@@ -48,15 +46,15 @@ class Dashboard extends Component {
     }
 
     loadPeople = () => {
-        API.searchMerchant()
-            .then(
-                res => {
-                    this.setState({ returnedPeople: res.data, isLoaded: true })
-                },
-                error => {
-                    this.setState({ isLoaded: true, error });
-                }
-            )
+        // API.searchMerchant()
+        //     .then(
+        //         res => {
+        //             this.setState({ returnedPeople: res.data, isLoaded: true })
+        //         },
+        //         error => {
+        //             this.setState({ isLoaded: true, error });
+        //         }
+        //     )
     };
 
     render() {

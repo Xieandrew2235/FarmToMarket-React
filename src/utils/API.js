@@ -2,14 +2,17 @@ import axios from "axios";
 
 export default {
     //https://cors-anywhere.herokuapp.com/
-    searchFarmer: function () {
-        return axios.get("http://localhost:3001/api/farmers")
+    searchFarmer:  () => {
+        return axios.get("/api/farmers")
     },
-    searchMerchant: function () {
-        return axios.get("http://localhost:3001/api/merchants")
+    getFarmersByProduce: (prod_name) => {
+        return axios.get("/api/farmers/produce")
+    },
+    searchMerchant:  () => {
+        return axios.get("/api/merchants")
     },
     //get request to receive a user's ifo with his/her items and the wishlist
-    getUserInfo: function (userid) {
+    getUserInfo:  (userid) => {
         return axios.get("" + userid)
     },
 
@@ -17,11 +20,59 @@ export default {
     // ====================================
 
     registerNewUser: userData => {
-        return axios.post("http://localhost:3001/auth/register", userData);
+        return fetch("/auth/register",{
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json; charset=utf-8"
+            },
+            body: JSON.stringify(userData),
+            credentials: 'include',
+            mode: 'cors'
+          });
     },
-
     loginUser: userData => {
-        return axios.post("http://localhost:3001/auth/signin", userData);
+        return fetch("/auth/signin",{
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json; charset=utf-8"
+            },
+            body: JSON.stringify(userData),
+            credentials: 'include',
+            mode: 'cors'
+        });
+    },
+    checkAuth: () => {
+		return fetch("/auth", {
+            method: 'GET',
+            credentials: 'include',
+            mode: 'cors'
+        });
+    },
+    logoutUser: () => {
+        return fetch("/auth/logout", {
+            method: 'GET',
+            credentials: 'include',
+            mode: 'cors'
+        });
+    },
+    getUserData: () => {
+        return fetch("/api/farmers/user", {
+            method: 'GET',
+            credentials: 'include',
+            mode: 'cors'
+        }); 
+    },
+    updateUser: (user) =>{
+        return fetch("/api/farmers/user",{
+            method: 'PUT',
+            headers: {
+                "Content-Type": "application/json; charset=utf-8"
+            },
+            body: JSON.stringify(user),
+            credentials: 'include',
+            mode: 'cors'
+        });
     }
+    
 
 }

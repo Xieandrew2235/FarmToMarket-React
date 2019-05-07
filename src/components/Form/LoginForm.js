@@ -22,7 +22,6 @@ class LoginForm extends Component {
         
         event.preventDefault();
 
-
         const userData = {
             userName: this.state.userName,
             password: this.state.password
@@ -30,8 +29,16 @@ class LoginForm extends Component {
 
         // Add a new method to utils/API - call it loginUser. This method should make an axios POST request to http://localhost:3001/auth/signin and look like this -> return axios.post("http://localhost:3001/auth/signin", userData);
         API.loginUser(userData)
-            .then(res => console.log(res))
+            .then(data => {return data.json()})
+            .then(res => {
+                if(res === true) {
+                    window.location.href = "/dashboard";
+                }else {
+                    alert(res.message)
+                }
+            })
             .catch(err => console.log(err));
+
     };
 
     render() {
