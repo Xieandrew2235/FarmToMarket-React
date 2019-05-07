@@ -184,7 +184,7 @@ renderEditUserInfo = () => {
             onChange={this.handleSearchInputChange}
             name="prod_Name"
             placeholder="Search for farmers by their produce!"/>
-          <Button onClick={this.handleSearchSubmit}>Searchs</Button>
+          <Button onClick={this.handleSearchSubmit}>Search</Button>
 
           <div className="container">
 
