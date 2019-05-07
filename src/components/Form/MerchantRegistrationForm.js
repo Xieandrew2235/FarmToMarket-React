@@ -72,7 +72,7 @@ class MerchantRegistrationForm extends Component {
             <div className="form">
 
                 <form className="formCont">
-                    <h2 >Merchant Registration</h2>
+                    <h2>Registration</h2>
                     <Row>
                         <TextInput label="Enter a username" id="userName" type="text" name="userName" required onChange={this.handleInputChange} className="validat" s={12} m={6} l={6} /> 
                         <TextInput label="Enter your password (at least 6 characters)" id="password" type="password" name="password" required onChange={this.handleInputChange} className="validate" s={12} m={6} l={6} />
